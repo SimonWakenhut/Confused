@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confused", "Confused\Confused.csproj", "{8759FE87-B0CC-48B4-B1F0-311353DFAF1E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confused.Tests", "Confused.Tests\Confused.Tests.csproj", "{C7D93EFE-AE0E-446D-B5EB-A8F9AA27005E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8759FE87-B0CC-48B4-B1F0-311353DFAF1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8759FE87-B0CC-48B4-B1F0-311353DFAF1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8759FE87-B0CC-48B4-B1F0-311353DFAF1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8759FE87-B0CC-48B4-B1F0-311353DFAF1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D93EFE-AE0E-446D-B5EB-A8F9AA27005E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D93EFE-AE0E-446D-B5EB-A8F9AA27005E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D93EFE-AE0E-446D-B5EB-A8F9AA27005E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D93EFE-AE0E-446D-B5EB-A8F9AA27005E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B12E11A-88B5-429E-B66F-ED64730749A7}
+	EndGlobalSection
+EndGlobal
