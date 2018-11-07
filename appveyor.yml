@@ -7,6 +7,9 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
+artifacts:
+- path: Confused\bin\Release\Confused.*.nupkg
+  name: Confused
 install:
 - cmd: dotnet restore
 nuget:
