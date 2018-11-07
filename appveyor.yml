@@ -19,4 +19,4 @@ before_deploy:
 - cmd: dotnet pack Confused -c Release
 deploy:
   - provider: Environment
-    name: Confused NuGet
+    name: Confused NugGet
