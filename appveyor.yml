@@ -1,13 +1,22 @@
-version: '{build}'
+version: 0.0.{build}
+dotnet_csproj:
+  patch: true
+  file: Confused\Confused.csproj
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
 install:
 - cmd: dotnet restore
 nuget:
-  account_feed: true
   project_feed: true
 build_script:
-- cmd: dotnet build
+- cmd: dotnet build Confused -c Release
 test_script:
 - cmd: dotnet test Confused.Tests/Confused.Tests.csproj
+before_deploy:
+- cmd: dotnet pack Confused -c Release
 deploy:
   - provider: Environment
     name: Confused NuGet

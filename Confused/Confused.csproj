@@ -1,7 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Authors>Simon Wakenhut</Authors>
+    <Description>Confused is a simple library that parses .conf files (ini-style) into a easy readable dictionary.</Description>
+    <PackageProjectUrl>https://github.com/simwak/Confused</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/simwak/Confused</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>conf conf-parser ini ini-parser</PackageTags>
   </PropertyGroup>
-
 </Project>
