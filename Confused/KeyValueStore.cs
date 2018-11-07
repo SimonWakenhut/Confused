@@ -4,9 +4,9 @@ namespace Confused
 {
     /// <inheritdoc />
     /// <summary>
-    ///     The KeyValueStore holds a simple KeyValue data
+    ///     The KeyValueStore holds every data from a .conf-file
     /// </summary>
-    public class KeyValue : Dictionary<string, string>
+    public class KeyValueStore : Dictionary<string, KeyValue>
     {
     }
 }
