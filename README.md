@@ -1,4 +1,4 @@
-# Confused [![Build Status](https://travis-ci.org/SimonWakenhut/Confused.svg?branch=master)](https://travis-ci.org/SimonWakenhut/Confused)
+# Confused [![Build Status](https://ci.appveyor.com/api/projects/status/tv0bc7ilr1ygqroh?svg=true)](https://ci.appveyor.com/project/simwak/confused)
 
 Confused is a simple library that parses .conf files (ini-style) into a easy readable dictionary.
 

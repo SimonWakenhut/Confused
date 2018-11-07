@@ -1,0 +1,13 @@
+version: '{build}'
+install:
+- cmd: dotnet restore
+nuget:
+  account_feed: true
+  project_feed: true
+build_script:
+- cmd: dotnet build
+test_script:
+- cmd: dotnet test Confused.Tests/Confused.Tests.csproj
+deploy:
+  - provider: Environment
+    name: Confused NuGet
