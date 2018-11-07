@@ -7,5 +7,6 @@
     <RepositoryUrl>https://github.com/simwak/Confused</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>conf conf-parser ini ini-parser</PackageTags>
+    <Version>0.0.0</Version>
   </PropertyGroup>
 </Project>
