@@ -15,11 +15,9 @@ install:
 nuget:
   project_feed: true
 build_script:
-- cmd: >-
-    dotnet build Confused -c Release
-    dotnet pack Confused -c Release
+- cmd: 'dotnet build Confused -c Release && dotnet pack Confused -c Release'
 test_script:
 - cmd: dotnet test Confused.Tests/Confused.Tests.csproj
 deploy:
-  - provider: Environment
-    name: Confused NuGet
+- provider: Environment
+  name: Confused NuGet
