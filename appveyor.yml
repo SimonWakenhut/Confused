@@ -1,4 +1,4 @@
-skip_non_tags: true
+version: {build}
 dotnet_csproj:
   patch: true
   file: Confused\Confused.csproj
@@ -12,6 +12,8 @@ artifacts:
   name: Confused
 init:
 - ps: Update-AppveyorBuild -Version "$($env:APPVEYOR_REPO_TAG_NAME.TrimStart("v"))"
+  on:
+    APPVEYOR_REPO_TAG: true
 install:
 - cmd: dotnet restore
 build_script:
@@ -22,3 +24,5 @@ test_script:
 deploy:
 - provider: Environment
   name: Confused NuGet
+  on:
+    APPVEYOR_REPO_TAG: true
