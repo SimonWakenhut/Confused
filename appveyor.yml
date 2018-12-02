@@ -1,4 +1,7 @@
 version: {build}
+branches:
+  only:
+  - master
 dotnet_csproj:
   patch: true
   file: Confused\Confused.csproj
