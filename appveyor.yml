@@ -1,0 +1,31 @@
+version: {build}
+branches:
+  only:
+  - master
+dotnet_csproj:
+  patch: true
+  file: Confused\Confused.csproj
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+artifacts:
+- path: Confused\bin\Release\Confused.*.nupkg
+  name: Confused
+init:
+- ps: Update-AppveyorBuild -Version "$($env:APPVEYOR_REPO_TAG_NAME.TrimStart("v"))"
+  on:
+    APPVEYOR_REPO_TAG: true
+install:
+- cmd: dotnet restore
+build_script:
+- cmd: dotnet build Confused -c Release
+- cmd: dotnet pack Confused -c Release
+test_script:
+- cmd: dotnet test Confused.Tests/Confused.Tests.csproj
+deploy:
+- provider: Environment
+  name: Confused NuGet
+  on:
+    APPVEYOR_REPO_TAG: true
