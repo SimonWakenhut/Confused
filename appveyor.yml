@@ -1,4 +1,4 @@
-version: 0.0.{build}
+skip_non_tags: true
 dotnet_csproj:
   patch: true
   file: Confused\Confused.csproj
@@ -10,10 +10,10 @@ dotnet_csproj:
 artifacts:
 - path: Confused\bin\Release\Confused.*.nupkg
   name: Confused
+init:
+- ps: Update-AppveyorBuild -Version "$($env:APPVEYOR_REPO_TAG_NAME.TrimStart("v"))"
 install:
 - cmd: dotnet restore
-nuget:
-  project_feed: true
 build_script:
 - cmd: dotnet build Confused -c Release
 - cmd: dotnet pack Confused -c Release
