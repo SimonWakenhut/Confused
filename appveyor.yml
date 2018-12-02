@@ -1,4 +1,4 @@
-version: {build}
+version: '{build}'
 branches:
   only:
   - master
@@ -14,9 +14,17 @@ artifacts:
 - path: Confused\bin\Release\Confused.*.nupkg
   name: Confused
 init:
-- ps: Update-AppveyorBuild -Version "$($env:APPVEYOR_REPO_TAG_NAME.TrimStart("v"))"
-  on:
-    APPVEYOR_REPO_TAG: true
+- ps: >-
+    if ($env:APPVEYOR_REPO_TAG -eq "true") 
+    { 
+      $version = $env:appveyor_repo_tag_name.TrimStart("v"); 
+      Update-AppveyorBuild -Version "$version"; 
+    } else 
+    {
+      $build = $env:appveyor_build_number;
+      Update-AppveyorBuild -Version "0.0.0.$build";
+    }
+    
 install:
 - cmd: dotnet restore
 build_script:
